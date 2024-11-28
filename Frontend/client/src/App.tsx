@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import {BrowserRouter as Router, Route, Routes, useNavigate} from "react-router-dom"
 import {Login} from "./Pages/Login"
-import './App.css';
 
 function App() {
   return (

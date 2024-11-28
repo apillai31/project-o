@@ -3,9 +3,6 @@ import { AppBar, Toolbar, Typography, IconButton, Box } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import {useNavigate} from "react-router-dom"
-interface NavbarProps {
-  onLogout: () => void; // Function to call on logout
-}
 
 export const Navbar: React.FC = () => {
     const navigate = useNavigate();
@@ -31,3 +28,4 @@ export const Navbar: React.FC = () => {
     </AppBar>
   );
 };
+

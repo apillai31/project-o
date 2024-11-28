@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Routes, useNavigate} from "react-router-
 import {Login} from "./Pages/Login"
 import {Home} from "./Pages/Home"
 
-import './App.css';
+
 
 function App() {
   return (

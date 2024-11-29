@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, Paper, Typography } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableSortLabel, TableHead, TableRow, TextField, Paper, Typography } from '@mui/material';
 import Papa from 'papaparse';
 
 interface DataRow {
@@ -12,6 +12,7 @@ interface DataRow {
 
 const TableComponent: React.FC = () => {
     const [data, setData] = useState<DataRow[]>([]);
+    const [headers, setHeaders] = useState<DataRow[]>([]);
     const [loading, setLoading] = useState(false)
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -20,9 +21,11 @@ const TableComponent: React.FC = () => {
         if (file) {
           Papa.parse(file, {
             header: true,
+            skipEmptyLines: true,
             dynamicTyping: true,
             complete: (results:any) => {
               setData(results.data);
+              setHeaders(Object.keys(results.data[0]))
             },
             error: (error) => {
               console.error("Error reading file:", error);
@@ -55,21 +58,19 @@ const TableComponent: React.FC = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Table1</TableCell>
-                            <TableCell>Table2</TableCell>
-                            <TableCell>Column1</TableCell>
-                            <TableCell>Column2</TableCell>
-                            <TableCell>Similarity_Score</TableCell>
+                            {headers.map((header) => (
+                                <TableCell key={header}>
+                                    <TableSortLabel>{header}</TableSortLabel>
+                                </TableCell>
+                            ))}
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {data.map((row) => (
-                            <TableRow>
-                                <TableCell>{row.Table1}</TableCell>
-                                <TableCell>{row.Table2}</TableCell>
-                                <TableCell>{row.Column1}</TableCell>
-                                <TableCell>{row.Column2}</TableCell>
-                                <TableCell>{row.Similarity_Score}</TableCell>
+                        {data.map((row, index) => (
+                            <TableRow key={index}>
+                            {headers.map((header) => (
+                                <TableCell key={header}>{row[header]}</TableCell>
+                            ))}
                             </TableRow>
                         ))}
                     </TableBody>

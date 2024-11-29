@@ -5,15 +5,23 @@ import { Box, Typography } from "@mui/material"
 import { Navbar } from "../components/Navbar"
 import { Loading } from "../components/LoadingAnimations";
 import axios from 'axios';
+import TableComponent from "../components/TableComponent"
 
 export const Home = () => {
   const [showLoading, setShowLoading] = useState(false);
+  const [showTable, setShowTable] = useState(false);
+  const handleShowTable = () => {
+    setShowLoading(false);
+    setShowTable(true);
+  }
   const emptyFile: HTMLInputElement = document.createElement("input");
   const file1InputRef = useRef(emptyFile);
   const file2InputRef = useRef(emptyFile);
 
   async function handleClick() {
     setShowLoading(true);
+    showTable ? setShowLoading(false) : setShowLoading(true);
+    handleShowTable();
     var file1Input: HTMLInputElement = file1InputRef.current;
     var file2Input: HTMLInputElement = file2InputRef.current;
     if (file1Input == null || file2Input == null || file1Input.files == null || file2Input.files == null)
@@ -64,6 +72,10 @@ export const Home = () => {
         <button onClick={handleClick}>Submit</button>
         {showLoading && <Loading></Loading>}
       </Box>
+      <hr />
+
+
+      {showTable && <TableComponent />}
     </>
   )
-} 
+}

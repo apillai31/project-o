@@ -1,0 +1,28 @@
+Table-1,Table-2,Column_1,Column_2,Similarity score
+ods_item_master.csv,dh_item_master.csv,ON_HAND_QUANTITY,ON_HAND_QUANTITY,0.995629341
+ods_item_master.csv,dh_item_master.csv,DH_UPDT_DT,ODS_UPDT_DT,0.704543144
+ods_item_master.csv,dh_item_master.csv,ORGANIZATION_NAME,ORGANIZATION_NAME,0.949993292
+ods_item_master.csv,dh_item_master.csv,DH_ITEM_KEY,ITEM_ID,0.834852147
+ods_item_master.csv,dh_item_master.csv,STATUS_CODE,STATUS_CODE,1
+ods_item_master.csv,dh_item_master.csv,ORG_ITEM_NAME_CST,ITEM_NAME,0.780427116
+ods_item_master.csv,dh_item_master.csv,WAREHOUSE_CODE,WAREHOUSE_CODE,1
+ods_item_master.csv,dh_item_master.csv,ENABLED_FLAG,ENABLED_FLAG,0.966532093
+ods_item_master.csv,dh_item_master.csv,ACTIVE_FLAG,No match,N/A
+ods_item_master.csv,dh_item_master.csv,WEB_STATUS,WEB_STATUS,0.92842498
+ods_item_master.csv,dh_item_master.csv,ITEM_ID,ITEM_ID,0.982144742
+ods_item_master.csv,dh_item_master.csv,SHORT_DESCRIPTION,SHORT_DESCRIPTION,0.977010354
+ods_item_master.csv,dh_item_master.csv,TOTAL_LEAD_TIME,TOTAL_LEAD_TIME,1
+ods_item_master.csv,dh_item_master.csv,BRAND,No match,N/A
+ods_item_master.csv,dh_item_master.csv,item_attribute,ITEM_NAME,0.723148279
+ods_item_master.csv,dh_item_master.csv,ORG_ITEM_NAME,ITEM_NAME,0.834286213
+ods_item_master.csv,dh_item_master.csv,CATEGORY,CATEGORY,0.97512405
+ods_item_master.csv,dh_item_master.csv,PRODUCT_LAST_UPDATE_DATE_UTC,PRODUCT_LAST_UPDATE_DATE,0.829329912
+ods_item_master.csv,dh_item_master.csv,PRODUCT_LAST_UPDATE_DATE,PRODUCT_LAST_UPDATE_DATE,1
+ods_item_master.csv,dh_item_master.csv,PRIMARY_UNIT_OF_MEASURE,PRIMARY_UNIT_OF_MEASURE,1
+ods_item_master.csv,dh_item_master.csv,ORGANIZATION_ID,ORGANIZATION_ID,0.975137397
+ods_item_master.csv,dh_item_master.csv,DH_CRDT_DT,ODS_CRDT_DT,0.750774313
+ods_item_master.csv,dh_item_master.csv,ITEM_NAME,ITEM_NAME,1
+ods_item_master.csv,dh_item_master.csv,ITEM_ORDERABLE,ITEM_ORDERABLE,0.935581073
+ods_item_master.csv,dh_item_master.csv,ORG_ITEM_CATG_ID,No match,N/A
+ods_item_master.csv,dh_item_master.csv,CATALOG,No match,N/A
+ods_item_master.csv,dh_item_master.csv,ORG_ITEM_ID,ITEM_NAME,0.79732678

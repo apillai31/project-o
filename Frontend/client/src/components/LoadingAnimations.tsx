@@ -1,7 +1,7 @@
 import react from 'react';
 import { Oval } from 'react-loader-spinner';
 
-export function Loading() {
+export const Loading =() => {
     return (
         <Oval visible={true}
             height="80"

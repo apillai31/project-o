@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import {BrowserRouter as Router, Route, Routes, useNavigate} from "react-router-dom"
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import {Login} from "./Pages/Login"
 import {Home} from "./Pages/Home"
 
